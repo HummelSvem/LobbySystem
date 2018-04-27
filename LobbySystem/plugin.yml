@@ -1,0 +1,12 @@
+name: LobbyItems
+version: LI-2.1
+api: 3.0.0-ALPHA12
+main: VL\LobbyItems
+author: VL (Real Author) | Zadezter
+commands:
+    build:
+        description: Lobby with a Build-mode command!
+    lobby:
+        description: Lobby command!
+    fly:
+        description: Fly access command!
