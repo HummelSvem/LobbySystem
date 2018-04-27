@@ -214,22 +214,30 @@ class LobbyItems extends PluginBase implements Listener
 		$exit->setCustomName(TextFormat::RESET . TextFormat::RED . "Exit");
 
 		$Skyblock = Item::get(2, 1, 1);
-		$Skyblock->setCustomName(TextFormat::RESET . TextFormat::GOLD . "Skyblock");
+		$Skyblock->setCustomName(TextFormat::RESET . TextFormat::YELLOW . "Skyblock");
 
 		$MicroBattles= Item::get(322, 1, 1);
-		$MicroBattles->setCustomName(TextFormat::RESET . TextFormat::GOLD . "MicroBattles");
+		$MicroBattles->setCustomName(TextFormat::RESET . TextFormat::RED . "MicroBattles");
 
 		$CityBuild = Item::get(138, 1, 1);
 		$CityBuild->setCustomName(TextFormat::RESET . TextFormat::GOLD . "CityBuild");
 
-		$Survival = Item::get(103, 1, 1);
+		$Survival = Item::get(52, 1, 1);
 		$Survival->setCustomName(TextFormat::RESET . TextFormat::GREEN . "Survival");
+		
+		$1vs1 = Item::get(276, 1, 1);
+		$1vs1->setCustomName(TextFormat::RESET . TextFormat::GREEN . ("1vs1");
+		
+		$MainHub = Item::get(41, 1, 1);
+		$MainHub->setCustomName(TextFormat::RESET . TextFormat::RED . ("MainHub");
 
 		$inv->setItem(8, $exit);
-		$inv->setItem(0, $CityBuild);
-		$inv->setItem(1, $Skyblock);
+		$inv->setItem(1, $CityBuild);
+		$inv->setItem(3, $Skyblock);
 		$inv->setItem(2, $MicroBattles);
-		$inv->setItem(4, $Survival);
+		$inv->setItem(6, $Survival);
+		$inv->setItem(7, $1vs1);
+		$inv->setItem(4, $MainHub);
 
 	}
 
@@ -372,13 +380,13 @@ class LobbyItems extends PluginBase implements Listener
 		$inv->clearAll();
 
 		$item1 = Item::get(265, 0, 1);
-		$item1->setCustomName(TextFormat::RESET . TextFormat::GOLD . "VIP - 5â¬ - 6 Monate");
+		$item1->setCustomName(TextFormat::RESET . TextFormat::GOLD . "VIP - 5€ - 6 Monate");
 
 		$item2 = Item::get(266, 0, 1);
 		$item2->setCustomName(TextFormat::RESET . TextFormat::GOLD . "Hero - 20");
 
 		$item3 = Item::get(264, 0, 1);
-		$item3->setCustomName(TextFormat::RESET . TextFormat::GOLD . "VIP - 10â¬ - LifeTime");
+		$item3->setCustomName(TextFormat::RESET . TextFormat::GOLD . "VIP - 10€ - LifeTime");
 
 		$exit = Item::get(351, 1, 1);
 		$exit->setCustomName(TextFormat::RESET . TextFormat::RED . "Exit");
@@ -396,17 +404,17 @@ class LobbyItems extends PluginBase implements Listener
 		$inv = $player->getInventory();
 		$inv->clearAll();
 
-		$item1 = Item::get(368, 0, 1);
+		$item1 = Item::get(345, 0, 1);
 		$item1->setCustomName(TextFormat::RESET . TextFormat::GOLD . "Teleporter");
 
-		$item2 = Item::get(130, 0, 1);
+		$item2 = Item::get(54, 0, 1);
 		$item2->setCustomName(TextFormat::RESET . TextFormat::GOLD . "Cosmetics");
 
 		$item3 = Item::get(264, 0, 1);
 		$item3->setCustomName(TextFormat::RESET . TextFormat::GOLD . "Rang Info");
 		
-		$item4 = Item::get(200,0,1);
-		$item4->setCustomName(TextFormat::RESET . TextFormat::BLUE . "Lobbys");
+		$item4 = Item::get(446, 0, 1);
+		$item4->setCustomName(TextFormat::RESET . TextFormat::BLACK . "Clans");
 
 		if (!in_array($name, $this->showall) && !in_array($name, $this->showvips) && !in_array($name, $this->shownone)) {
 
@@ -430,11 +438,11 @@ class LobbyItems extends PluginBase implements Listener
 			$item5->setCustomName(TextFormat::RESET . TextFormat::GRAY . "Keine Spieler sichtbar");
 
 		}
-		$inv->setItem(0, $item2);
-		$inv->setItem(2, $item1);
+		$inv->setItem(1, $item2);
+		$inv->setItem(3, $item1);
 		$inv->setItem(4, $item3);
-		$inv->setItem(6, $item4);
-		$inv->setItem(7, $item5);
+		$inv->setItem(5, $item4);
+		$inv->setItem(6, $item5);
 
 	}
 
@@ -527,11 +535,11 @@ class LobbyItems extends PluginBase implements Listener
 					$config->set("OpenChest1", true);
 					$config->save();
 
-					$player->sendMessage($this->prefix . TextFormat::GREEN . "Ãffne Kiste ...");
+					$player->sendMessage($this->prefix . TextFormat::GREEN . "Öffne Kiste ...");
 
 				} else {
 
-					$player->sendMessage($this->prefix . TextFormat::RED . "Hier wird bereits eine Kiste geÃ¶ffnet.");
+					$player->sendMessage($this->prefix . TextFormat::RED . "Hier wird bereits eine Kiste geöffnet.");
 
 				}
 
@@ -544,11 +552,11 @@ class LobbyItems extends PluginBase implements Listener
 					$config->set("OpenChest2", true);
 					$config->save();
 
-					$player->sendMessage($this->prefix . TextFormat::GREEN . "Ãffne Kiste ...");
+					$player->sendMessage($this->prefix . TextFormat::GREEN . "Öffne Kiste ...");
 
 				} else {
 
-					$player->sendMessage($this->prefix . TextFormat::RED . "Hier wird bereits eine Kiste geÃ¶ffnet.");
+					$player->sendMessage($this->prefix . TextFormat::RED . "Hier wird bereits eine Kiste geöffnet.");
 
 				}
 
@@ -662,7 +670,7 @@ class LobbyItems extends PluginBase implements Listener
 			$this->getTeleporter($player);
 		}
 		
-		if($in == TextFormat::RESET . TextFormat::GOLD . "Diamond - 10â¬") {
+		if($in == TextFormat::RESET . TextFormat::GOLD . "Diamond - 10€") {
 			
 			$player->sendMessage(TextFormat::GRAY . "===] " . TextFormat::GOLD . "Diamond" . TextFormat::GRAY . " [===");
 			$player->sendMessage(TextFormat::GOLD . "Preis" . TextFormat::GRAY . ": " . TextFormat::GREEN . "10 Euro");
@@ -672,7 +680,7 @@ class LobbyItems extends PluginBase implements Listener
 			
 		}
 		
-		if($in == TextFormat::RESET . TextFormat::GOLD . "Hero - 20â¬") {
+		if($in == TextFormat::RESET . TextFormat::GOLD . "Hero - 20€") {
 			
 			$player->sendMessage(TextFormat::GRAY . "===] " . TextFormat::GOLD . "Hero" . TextFormat::GRAY . " [===");
 			$player->sendMessage(TextFormat::GOLD . "Preis" . TextFormat::GRAY . ": " . TextFormat::GREEN . "20 Euro");
@@ -684,7 +692,7 @@ class LobbyItems extends PluginBase implements Listener
 			
 		}
 		
-		if($in == TextFormat::RESET . TextFormat::GOLD . "Titan - 15â¬") {
+		if($in == TextFormat::RESET . TextFormat::GOLD . "Titan - 15€") {
 			
 			$player->sendMessage(TextFormat::GRAY . "===] " . TextFormat::GOLD . "Titan" . TextFormat::GRAY . " [===");
 			$player->sendMessage(TextFormat::GOLD . "Preis" . TextFormat::GRAY . ": " . TextFormat::GREEN . "15 Euro");
@@ -692,7 +700,7 @@ class LobbyItems extends PluginBase implements Listener
 			$player->sendMessage(TextFormat::GRAY . "- " . TextFormat::GOLD . "Cosmetics");
 			$player->sendMessage(TextFormat::GRAY . "- " . TextFormat::GOLD . "Doppelte Coins in MiniGames");
 			$player->sendMessage(TextFormat::GRAY . "- " . TextFormat::GOLD . "OP Items in CityBuild" . TextFormat::GRAY . " | " . TextFormat::RED . "BALD");
-			$player->sendMessage(TextFormat::GRAY . "- " . TextFormat::GOLD . "5Ã Level 3 Kiste" . TextFormat::GRAY . " | " . TextFormat::RED . "BALD");
+			$player->sendMessage(TextFormat::GRAY . "- " . TextFormat::GOLD . "5× Level 3 Kiste" . TextFormat::GRAY . " | " . TextFormat::RED . "BALD");
 			$player->sendMessage(TextFormat::GRAY . "- " . TextFormat::GOLD . "Farbiger Nametag");
 			
 		}
@@ -713,8 +721,8 @@ class LobbyItems extends PluginBase implements Listener
 		
 		$cfg = new Config($this->getDataFolder() . "config.yml", Config::YAML);
 		
-		//GroeÃe
-		if($in == TextFormat::RESET . TextFormat::GOLD . "GroeÃen") {
+		//Groeße
+		if($in == TextFormat::RESET . TextFormat::GOLD . "Groeßen") {
 			
 			$this->getBigItems($player);
 			
@@ -734,9 +742,9 @@ class LobbyItems extends PluginBase implements Listener
 			
 		}
 		
-		if($in == TextFormat::RESET . TextFormat::GOLD . "GroÃ") {
+		if($in == TextFormat::RESET . TextFormat::GOLD . "Groß") {
 			
-			$player->sendMessage($this->prefix . TextFormat::GREEN . "Du bist jetzt " . TextFormat::GOLD . "GroÃ");
+			$player->sendMessage($this->prefix . TextFormat::GREEN . "Du bist jetzt " . TextFormat::GOLD . "Groß");
 			$player->setDataProperty(Entity::DATA_SCALE, Entity::DATA_TYPE_FLOAT, 1.5);
 			
 		}
