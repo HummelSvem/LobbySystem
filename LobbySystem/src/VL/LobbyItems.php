@@ -416,6 +416,7 @@ class LobbyItems extends PluginBase implements Listener
 		$item4 = Item::get(446, 0, 1);
 		$item4->setCustomName(TextFormat::RESET . TextFormat::BLACK . "Clans");
 
+
 		if (!in_array($name, $this->showall) && !in_array($name, $this->showvips) && !in_array($name, $this->shownone)) {
 
 			$this->showall[] = $name;
