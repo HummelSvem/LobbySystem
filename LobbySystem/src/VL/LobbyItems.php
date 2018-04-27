@@ -232,12 +232,12 @@ class LobbyItems extends PluginBase implements Listener
 		$MainHub->setCustomName(TextFormat::RESET . TextFormat::RED . ("MainHub");
 
 		$inv->setItem(8, $exit);
-		$inv->setItem(1, $CityBuild);
-		$inv->setItem(3, $Skyblock);
+		$inv->setItem(0, $CityBuild);
+		$inv->setItem(1, $Skyblock);
 		$inv->setItem(2, $MicroBattles);
-		$inv->setItem(6, $Survival);
-		$inv->setItem(7, $1vs1);
-		$inv->setItem(4, $MainHub);
+		$inv->setItem(3, $Survival);
+		$inv->setItem(4, $1vs1);
+		$inv->setItem(5, $MainHub);
 
 	}
 
@@ -438,7 +438,7 @@ class LobbyItems extends PluginBase implements Listener
 			$item5->setCustomName(TextFormat::RESET . TextFormat::GRAY . "Keine Spieler sichtbar");
 
 		}
-		$inv->setItem(1, $item2);
+		$inv->setItem(2, $item2);
 		$inv->setItem(3, $item1);
 		$inv->setItem(4, $item3);
 		$inv->setItem(5, $item4);
