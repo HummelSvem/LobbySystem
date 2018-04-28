@@ -225,18 +225,18 @@ class LobbyItems extends PluginBase implements Listener
 		$Survival = Item::get(52, 1, 1);
 		$Survival->setCustomName(TextFormat::RESET . TextFormat::GREEN . "Survival");
 		
-		$1vs1 = Item::get(276, 1, 1);
-		$1vs1->setCustomName(TextFormat::RESET . TextFormat::GREEN . ("1vs1");
+		$Duels = Item::get(276, 1, 1);
+		$Duels->setCustomName(TextFormat::RESET . TextFormat::GREEN . ("Duels");
 		
 		$MainHub = Item::get(41, 1, 1);
 		$MainHub->setCustomName(TextFormat::RESET . TextFormat::RED . ("MainHub");
 
 		$inv->setItem(8, $exit);
 		$inv->setItem(0, $CityBuild);
-		$inv->setItem(2, $Skyblock);
-		$inv->setItem(1,$MicroBattles);
+		$inv->setItem(1, $Skyblock);
+		$inv->setItem(2,$MicroBattles);
 		$inv->setItem(4, $Survival);
-		$inv->setItem(5, $1vs1);
+		$inv->setItem(5, $Duels);
 		$inv->setItem(3, $MainHub);
 
 	}
