@@ -362,7 +362,7 @@ class LobbyItems extends PluginBase implements Listener
 		$item5 = Item::get(421, 0, 1);
 		$item5->setCustomName(TextFormat::RESET . TextFormat::GOLD . "Nick");
 		
-		$item6 = Item::get(
+		$item6 = Item::get(260, 0, 1);
 		$item6->setCustomName(TextFormat::RESET . TextFormat::GREEN . "Pets");
 
 		$exit = Item::get(351, 1, 1);
