@@ -234,10 +234,10 @@ class LobbyItems extends PluginBase implements Listener
 		$inv->setItem(8, $exit);
 		$inv->setItem(0, $CityBuild);
 		$inv->setItem(1, $Skyblock);
-		$inv->setItem(2,$MicroBattles);
+		$inv->setItem(2, $MicroBattles);
 		$inv->setItem(4, $Survival);
-		$inv->setItem(5, $Duels);
-		$inv->setItem(3, $MainHub);
+		$inv->setItem(3, $Duels);
+		$inv->setItem(5, $MainHub);
 
 	}
 
@@ -361,6 +361,9 @@ class LobbyItems extends PluginBase implements Listener
 
 		$item5 = Item::get(421, 0, 1);
 		$item5->setCustomName(TextFormat::RESET . TextFormat::GOLD . "Nick");
+		
+		$item6 = Item::get(
+		$item6->setCustomName(TextFormat::RESET . TextFormat::GREEN . "Pets");
 
 		$exit = Item::get(351, 1, 1);
 		$exit->setCustomName(TextFormat::RESET . TextFormat::RED . "Exit");
@@ -370,6 +373,7 @@ class LobbyItems extends PluginBase implements Listener
 		$inv->setItem(2, $item3);
 		$inv->setItem(3, $item4);
 		$inv->setItem(4, $item5);
+		$inv->setItem(5, $item6);
 		$inv->setItem(8, $exit);
 
 	}
@@ -410,11 +414,8 @@ class LobbyItems extends PluginBase implements Listener
 		$item2 = Item::get(54, 0, 1);
 		$item2->setCustomName(TextFormat::RESET . TextFormat::GOLD . "Cosmetics");
 
-		$item3 = Item::get(264, 0, 1);
-		$item3->setCustomName(TextFormat::RESET . TextFormat::GOLD . "Rang Info");
-		
-		$item4 = Item::get(446, 0, 1);
-		$item4->setCustomName(TextFormat::RESET . TextFormat::BLACK . "Clans");
+		$item3 = Item::get(446, 0, 1);
+		$item3->setCustomName(TextFormat::RESET . TextFormat::BLACK . "Clans");
 
 		if (!in_array($name, $this->showall) && !in_array($name, $this->showvips) && !in_array($name, $this->shownone)) {
 
@@ -424,25 +425,24 @@ class LobbyItems extends PluginBase implements Listener
 
 		if (in_array($name, $this->showall)) {
 
-			$item5 = Item::get(351, 10, 1);
-			$item5->setCustomName(TextFormat::RESET . TextFormat::GREEN . "Alle Spieler sichtbar");
+			$item4 = Item::get(351, 10, 1);
+			$item4->setCustomName(TextFormat::RESET . TextFormat::GREEN . "Alle Spieler sichtbar");
 
 		} elseif (in_array($name, $this->showvips)) {
 
-			$item5 = Item::get(351, 5, 1);
-			$item5->setCustomName(TextFormat::RESET . TextFormat::DARK_PURPLE . "Nur VIP's sichtbar");
+			$item4 = Item::get(351, 5, 1);
+			$item4->setCustomName(TextFormat::RESET . TextFormat::DARK_PURPLE . "Nur VIP's sichtbar");
 
 		} elseif (in_array($name, $this->shownone)) {
 
-			$item5 = Item::get(351, 8, 1);
-			$item5->setCustomName(TextFormat::RESET . TextFormat::GRAY . "Keine Spieler sichtbar");
+			$item54 = Item::get(351, 8, 1);
+			$item4->setCustomName(TextFormat::RESET . TextFormat::GRAY . "Keine Spieler sichtbar");
 
 		}
-		$inv->setItem(2, $item2);
+		$inv->setItem(0, $item2);
 		$inv->setItem(3, $item1);
 		$inv->setItem(4, $item3);
-		$inv->setItem(5, $item4);
-		$inv->setItem(6, $item5);
+		$inv->setItem(6, $item4);
 
 	}
 
@@ -610,7 +610,7 @@ class LobbyItems extends PluginBase implements Listener
 			$event->getPlayer()->transfer("play.atarove.de","19555");
 		}
 
-		if ($in == TextFormat::RESET . TextFormat::GOLD . "Rang Info") {
+		if ($in == TextFormat::RESET . TextFormat::BLACK . "Clans") {
 
 			//$this->getRangMenu($player);
 			$event->getPlayer()->sendMessage($this->prefix . TextFormat::RED . "Bald");
