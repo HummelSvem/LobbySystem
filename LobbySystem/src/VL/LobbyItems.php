@@ -233,11 +233,11 @@ class LobbyItems extends PluginBase implements Listener
 
 		$inv->setItem(8, $exit);
 		$inv->setItem(0, $CityBuild);
-		$inv->setItem(1, $Skyblock);
-		$inv->setItem(2, $MicroBattles);
-		$inv->setItem(3, $Survival);
-		$inv->setItem(4, $1vs1);
-		$inv->setItem(5, $MainHub);
+		$inv->setItem(2, $Skyblock);
+		$inv->setItem(1,$MicroBattles);
+		$inv->setItem(4, $Survival);
+		$inv->setItem(5, $1vs1);
+		$inv->setItem(3, $MainHub);
 
 	}
 
@@ -420,8 +420,7 @@ class LobbyItems extends PluginBase implements Listener
 
 			$this->showall[] = $name;
 
-
-		}
+        }
 
 		if (in_array($name, $this->showall)) {
 
