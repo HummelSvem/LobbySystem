@@ -411,13 +411,13 @@ class LobbyItems extends PluginBase implements Listener
 		$item1 = Item::get(345, 0, 1);
 		$item1->setCustomName(TextFormat::RESET . TextFormat::GOLD . "Teleporter");
 
-		$item2 = Item::get(54, 0, 1);
+		$item2 = Item::get(130, 0, 1);
 		$item2->setCustomName(TextFormat::RESET . TextFormat::GOLD . "Cosmetics");
 
 		$item3 = Item::get(446, 0, 1);
 		$item3->setCustomName(TextFormat::RESET . TextFormat::BLACK . "Clans");
 		
-		$item4 = Item::get(54, 0, 1,);
+		$item4 = Item::get(54, 0, 1);
 		$item4->setCustomName(TextFormat::RESET . TextFormat::GREEN . "ChestOpening");
 
 		if (!in_array($name, $this->showall) && !in_array($name, $this->showvips) && !in_array($name, $this->shownone)) {
