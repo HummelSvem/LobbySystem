@@ -229,7 +229,7 @@ class LobbyItems extends PluginBase implements Listener
 		$Duels->setCustomName(TextFormat::RESET . TextFormat::GREEN . "Duels");
 		
 		$MainHub = Item::get(41, 1, 1);
-		$MainHub->setCustomName(TextFormat::RESET . TextFormat::RED . ("MainHub");
+		$MainHub->setCustomName(TextFormat::RESET . TextFormat::RED . "MainHub");
 
 		$inv->setItem(8, $exit);
 		$inv->setItem(0, $CityBuild);
