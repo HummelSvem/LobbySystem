@@ -230,6 +230,9 @@ class LobbyItems extends PluginBase implements Listener
 		
 		$MainHub = Item::get(41, 1, 1);
 		$MainHub->setCustomName(TextFormat::RESET . TextFormat::RED . "MainHub");
+		
+		$KnockbackFFA = Item::get(65, 1, 1);
+		$KnockbackFFA->setCustomName(TextFormat::RESET . TextFormat::BLUE . "KnockbackFFA");
 
 		$inv->setItem(8, $exit);
 		$inv->setItem(0, $CityBuild);
@@ -238,6 +241,7 @@ class LobbyItems extends PluginBase implements Listener
 		$inv->setItem(4, $Survival);
 		$inv->setItem(3, $Duels);
 		$inv->setItem(5, $MainHub);
+		$inv->setItem(6, $KnockbackFFA);
 
 	}
 
