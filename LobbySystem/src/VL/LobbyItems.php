@@ -226,7 +226,7 @@ class LobbyItems extends PluginBase implements Listener
 		$Survival->setCustomName(TextFormat::RESET . TextFormat::GREEN . "Survival");
 		
 		$Duels = Item::get(276, 1, 1);
-		$Duels->setCustomName(TextFormat::RESET . TextFormat::GREEN . ("Duels");
+		$Duels->setCustomName(TextFormat::RESET . TextFormat::GREEN . "Duels");
 		
 		$MainHub = Item::get(41, 1, 1);
 		$MainHub->setCustomName(TextFormat::RESET . TextFormat::RED . ("MainHub");
