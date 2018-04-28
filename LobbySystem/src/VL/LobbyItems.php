@@ -604,10 +604,10 @@ class LobbyItems extends PluginBase implements Listener
 
 		}
 		//run
-		if ($in == TextFormat::RESET . TextFormat::GOLD . "Skyblock") {
+		if ($in == TextFormat::RESET . TextFormat::YELLOW . "Skyblock") {
 			$event->getPlayer()->transfer("play.atarove.de", "9999");
 		}
-		if ($in == TextFormat::RESET . TextFormat::GOLD . "MicroBattles") {
+		if ($in == TextFormat::RESET . TextFormat::RED . "MicroBattles") {
 			$event->getPlayer()->transfer("play.atarove.de", "8888");
 		}
 		if ($in == TextFormat::RESET . TextFormat::GOLD . "CityBuild") {
