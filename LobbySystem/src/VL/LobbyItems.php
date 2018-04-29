@@ -617,7 +617,9 @@ class LobbyItems extends PluginBase implements Listener
 		if ($in == TextFormat::RESET . TextFormat::GOLD . "CityBuild") {
 			$event->getPlayer()->transfer("play.atarove.de","19555");
 		}
-
+        if ($in == TextFormat::RESET . TextFormat::BLUE . "KnockbackFFA") {
+        	 $event->getPlayer()->transfer("play.atarove.de","19888");
+        }        
 		if ($in == TextFormat::RESET . TextFormat::BLACK . "Clans") {
 
 			//$this->getRangMenu($player);
