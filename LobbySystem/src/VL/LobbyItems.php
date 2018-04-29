@@ -234,7 +234,7 @@ class LobbyItems extends PluginBase implements Listener
 		$KnockbackFFA = Item::get(280, 1, 1);
 		$KnockbackFFA->setCustomName(TextFormat::RESET . TextFormat::BLUE . "KnockbackFFA");
 		
-		$Bald = Item::get(95, 1, 1);
+		$Bald = Item::get(241, 1, 1);
 		$Bald->setCustomName(TextFormat::RESET . TextFormat::WHITE . "Bald");
 
 		$inv->setItem(8, $exit);
