@@ -231,8 +231,11 @@ class LobbyItems extends PluginBase implements Listener
 		$MainHub = Item::get(41, 1, 1);
 		$MainHub->setCustomName(TextFormat::RESET . TextFormat::RED . "MainHub");
 		
-		$KnockbackFFA = Item::get(65, 1, 1);
+		$KnockbackFFA = Item::get(280, 1, 1);
 		$KnockbackFFA->setCustomName(TextFormat::RESET . TextFormat::BLUE . "KnockbackFFA");
+		
+		$Bald = Item::get(95, 1, 1);
+		$Bald->setCustomName(TextFormat::RESET . TextFormat::WHITE . "Bald");
 
 		$inv->setItem(8, $exit);
 		$inv->setItem(0, $CityBuild);
@@ -242,6 +245,7 @@ class LobbyItems extends PluginBase implements Listener
 		$inv->setItem(3, $Duels);
 		$inv->setItem(5, $MainHub);
 		$inv->setItem(6, $KnockbackFFA);
+		$inv->setItem(7, $Bald);
 
 	}
 
