@@ -629,7 +629,10 @@ class LobbyItems extends PluginBase implements Listener
         }
        if ($in == TextFormat::RESET . TextFormat::GREEN . "Survival") {
        	$event->getPlayer()->transfer("play.atarove.de","10888");
-        }        
+        } 
+        if ($in == TextFormat::RESET . TextFormat::RED . "MainHub") {
+        	$event->getPlayer()->transfer("play.atarove.de","19132");
+        }
 		if ($in == TextFormat::RESET . TextFormat::BLACK . "Clans") {
 
 			//$this->getRangMenu($player);
