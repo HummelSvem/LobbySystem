@@ -217,10 +217,10 @@ class LobbyItems extends PluginBase implements Listener
 		$Skyblock->setCustomName(TextFormat::RESET . TextFormat::YELLOW . "Skyblock");
 
 		$MicroBattles= Item::get(322, 1, 1);
-		$MicroBattles->setCustomName(TextFormat::RESET . TextFormat::RED . "MicroBattles");
+		$MicroBattles->setCustomName(TextFormat::RESET . TextFormat::YELLOW . "MicroBattles");
 
 		$CityBuild = Item::get(138, 1, 1);
-		$CityBuild->setCustomName(TextFormat::RESET . TextFormat::GOLD . "CityBuild");
+		$CityBuild->setCustomName(TextFormat::RESET . TextFormat::YELLOW . "CityBuild");
 
 		$Survival = Item::get(52, 1, 1);
 		$Survival->setCustomName(TextFormat::RESET . TextFormat::GREEN . "Survival");
@@ -232,10 +232,10 @@ class LobbyItems extends PluginBase implements Listener
 		$MainHub->setCustomName(TextFormat::RESET . TextFormat::RED . "MainHub");
 		
 		$KnockbackFFA = Item::get(280, 1, 1);
-		$KnockbackFFA->setCustomName(TextFormat::RESET . TextFormat::BLUE . "KnockbackFFA");
+		$KnockbackFFA->setCustomName(TextFormat::RESET . TextFormat::GREEN . "KnockbackFFA");
 		
 		$Bald = Item::get(241, 1, 1);
-		$Bald->setCustomName(TextFormat::RESET . TextFormat::WHITE . "Bald");
+		$Bald->setCustomName(TextFormat::RESET . TextFormat::BLACK . "Bald");
 
 		$inv->setItem(8, $exit);
 		$inv->setItem(0, $CityBuild);
@@ -615,13 +615,13 @@ class LobbyItems extends PluginBase implements Listener
 		if ($in == TextFormat::RESET . TextFormat::YELLOW . "Skyblock") {
 			$event->getPlayer()->transfer("play.atarove.de", "9999");
 		}
-		if ($in == TextFormat::RESET . TextFormat::RED . "MicroBattles") {
+		if ($in == TextFormat::RESET . TextFormat::YELLOW . "MicroBattles") {
 			$event->getPlayer()->transfer("play.atarove.de", "8888");
 		}
-		if ($in == TextFormat::RESET . TextFormat::GOLD . "CityBuild") {
+		if ($in == TextFormat::RESET . TextFormat::YELLOW . "CityBuild") {
 			$event->getPlayer()->transfer("play.atarove.de","19555");
 		}
-        if ($in == TextFormat::RESET . TextFormat::BLUE . "KnockbackFFA") {
+        if ($in == TextFormat::RESET . TextFormat::GREEN . "KnockbackFFA") {
         	 $event->getPlayer()->transfer("play.atarove.de","19888");
         }        
 		if ($in == TextFormat::RESET . TextFormat::BLACK . "Clans") {
